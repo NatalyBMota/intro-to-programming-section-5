@@ -6,7 +6,9 @@ console.log(`${messages[3]}`);
 const tooHighMessage = document.getElementById('too-high');
 const tooLowMessage = document.getElementById('too-low');
 const maxGuessesMessage = document.getElementById('max-guesses');
-const numberOfGuessesMessage = document.getElementById('num-of-guesses');
+//const numberOfGuessesMessage = document.getElementById('num-of-guesses');
+let numberOfGuessesMessage = document.createElement('p');
+document.tooHighMessage.parentNode.appendChild(numberOfGuessesMessage);
 const correctMessage = document.getElementById('correct');
 
 let targetNumber;
