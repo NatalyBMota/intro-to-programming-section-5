@@ -47,7 +47,7 @@ function checkGuess() {
       tooLowMessage.style.display = '';
     }
 
-    const remainingAttempts = maxNumberOfAttempts - attempts;
+    let remainingAttempts = maxNumberOfAttempts - attempts;
 
     numberOfGuessesMessage.style.display = '';
     numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} guesses remaining`;
