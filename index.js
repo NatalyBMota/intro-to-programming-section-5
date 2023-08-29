@@ -7,7 +7,7 @@ const tooHighMessage = document.getElementById('too-high');
 const tooLowMessage = document.getElementById('too-low');
 const maxGuessesMessage = document.getElementById('max-guesses');
 //const numberOfGuessesMessage = document.getElementById('num-of-guesses');
-let numberOfGuessesMessage = document.createElement('p');
+const numberOfGuessesMessage = document.createElement('p');
 
 /* The code below find the div that stores the paragraphs with the class of message, and appends the new paragraph, which is stored in the variable numberOfGuessesMessage, to it. */
 tooHighMessage.parentNode.appendChild(numberOfGuessesMessage);
