@@ -76,8 +76,8 @@ function setup() {
   // Reset number of attempts
   maxNumberOfAttempts = 0;
 
-  // Enable the input and submit button
-  submitButton.disabled = false;
+  // Enable the input and submit button 
+  submitButton.disabled = false; //fixed the spelling of disabled
   guessInput.disabled = false;
 
   hideAllMessages();
