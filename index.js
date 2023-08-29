@@ -75,7 +75,7 @@ function setup() {
   console.log(`target number: ${targetNumber}`);
 
   // Reset number of attempts
-  maxNumberOfAttempts = 0;
+  remainingAttempts = 0;
 
   // Enable the input and submit button 
   submitButton.disabled = false; //fixed the spelling of disabled
