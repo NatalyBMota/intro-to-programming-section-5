@@ -75,7 +75,7 @@ function setup() {
   console.log(`target number: ${targetNumber}`);
 
   // Reset number of attempts
-  remainingAttempts = 0;
+  remainingAttempts = 0; /* It is possible that this remaining attempts should be reset to 5, and not to 0. */
 
   // Enable the input and submit button 
   submitButton.disabled = false; //fixed the spelling of disabled
