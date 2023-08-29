@@ -2,7 +2,7 @@ const guessInput = document.getElementById('guess');
 const submitButton = document.getElementById('submit');
 const resetButton = document.getElementById('reset');
 const messages = document.getElementsByClassName('message');
-console.log(`${messages[0]}`);
+console.log(`${messages[3]}`);
 const tooHighMessage = document.getElementById('too-high');
 const tooLowMessage = document.getElementById('too-low');
 const maxGuessesMessage = document.getElementById('max-guesses');
