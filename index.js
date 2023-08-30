@@ -1,13 +1,14 @@
 const guessInput = document.getElementById('guess');
 const submitButton = document.getElementById('submit');
 const resetButton = document.getElementById('reset');
-const messages = document.getElementsByClassName('message');
-console.log(`${messages[3]}`);
 const tooHighMessage = document.getElementById('too-high');
 const tooLowMessage = document.getElementById('too-low');
 const maxGuessesMessage = document.getElementById('max-guesses');
 //const numberOfGuessesMessage = document.getElementById('num-of-guesses');
 const numberOfGuessesMessage = document.createElement('p');
+numberOfGuessesMessage.className = 'message';
+const messages = document.getElementsByClassName('message');
+console.log(`${messages[4]}`);
 
 /* The code below find the div that stores the paragraphs with the class of message, and appends the new paragraph, which is stored in the variable numberOfGuessesMessage, to it. */
 tooHighMessage.parentNode.appendChild(numberOfGuessesMessage);
@@ -79,7 +80,7 @@ function setup() {
   console.log(`target number: ${targetNumber}`);
 
   // Reset number of attempts
-  remainingAttempts = 5; /* It is possible that this remaining attempts should be reset to 5, and not to 0. */
+  attempts = 0; /* It is possible that this remaining attempts should be reset to 5, and not to 0. remainingAttempts = 5*/
 
   // Enable the input and submit button 
   submitButton.disabled = false; //fixed the spelling of disabled
@@ -90,6 +91,10 @@ function setup() {
 }
 
 submitButton.addEventListener('click', checkGuess);
-resetButton.addEventListener('click', setup);
+resetButton.addEventListener('click', function () {
+  console.log('The reset button was clicked.')
+  setup();
+  hideAllMessages();
+});
 
 setup();
