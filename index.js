@@ -8,7 +8,7 @@ const maxGuessesMessage = document.getElementById('max-guesses');
 const numberOfGuessesMessage = document.createElement('p');
 numberOfGuessesMessage.className = 'message';
 const messages = document.getElementsByClassName('message');
-console.log(`${messages[4]}`);
+//console.log(`${messages[4]}`);
 
 /* The code below find the div that stores the paragraphs with the class of message, and appends the new paragraph, which is stored in the variable numberOfGuessesMessage, to it. */
 tooHighMessage.parentNode.appendChild(numberOfGuessesMessage);
@@ -92,7 +92,6 @@ function setup() {
 
 submitButton.addEventListener('click', checkGuess);
 resetButton.addEventListener('click', function () {
-  console.log('The reset button was clicked.')
   setup();
   hideAllMessages();
 });
