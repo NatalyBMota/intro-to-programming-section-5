@@ -91,7 +91,16 @@ function checkGuess() {
       let remainingAttempts = maxNumberOfAttempts - attempts;
   
       numberOfGuessesMessage.style.display = '';
-      numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} guesses remaining`;
+
+      function useWordGuessOrGuesses() {
+        if (remainingAttempts === 1) {
+          return 'guess';
+        } else {
+          return 'guesses';
+        }
+      }
+
+      numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} ${useWordGuessOrGuesses()} remaining`;
     }
 
     if (attempts === maxNumberOfAttempts) {
