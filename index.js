@@ -5,11 +5,28 @@ const tooHighMessage = document.getElementById('too-high');
 const tooLowMessage = document.getElementById('too-low');
 const maxGuessesMessage = document.getElementById('max-guesses');
 //const numberOfGuessesMessage = document.getElementById('num-of-guesses');
+function createParagraphAndSetClassNameToMessage() {
+  const message = document.createElement('p');
+  message.className = 'message';
+  return message;
+}
+/*
 const numberOfGuessesMessage = document.createElement('p');
 numberOfGuessesMessage.className = 'message';
 const outOfRangeLowMessage = document.createElement('p');
 outOfRangeLowMessage.className = 'message';
+*/
+const numberOfGuessesMessage = createParagraphAndSetClassNameToMessage();
+const outOfRangeLowMessage = createParagraphAndSetClassNameToMessage();
+
+/* Pass a string that either says 'below 1' or 'above 99' as an argument to this function. */
+function createOutOfRangeHighOrLowMessage(stringAboutHowNumIsOutOfRange) {
+  return `You guessed a number ${stringAboutHowNumIsOutOfRange}. <br>This did not count as a turn. Please try again. <br>Only numbers between 1 and 99 are allowed guesses.`;
+}
+outOfRangeLowMessage.innerHTML = createOutOfRangeHighOrLowMessage('below 1');
+/*
 outOfRangeLowMessage.innerHTML = 'You guessed a number below 1. <br>This did not count as a turn. Please try again. <br>Only numbers between 1 and 99 are allowed guesses.';
+*/
 outOfRangeLowMessage.style.textAlign = 'center';
 outOfRangeLowMessage.style.color = 'red';
 const outOfRangeHighMessage = document.createElement('p');
