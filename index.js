@@ -28,28 +28,14 @@ function createOutOfRangeHighOrLowMessage(stringAboutHowNumIsOutOfRange) {
   return `You guessed a number ${stringAboutHowNumIsOutOfRange}. <br>This did not count as a turn. Please try again. ${mentionedAllowedGuesses()}`;
 }
 outOfRangeLowMessage.innerHTML = createOutOfRangeHighOrLowMessage('below 1');
-/*
-outOfRangeLowMessage.innerHTML = 'You guessed a number below 1. <br>This did not count as a turn. Please try again. <br>Only numbers between 1 and 99 are allowed guesses.';
-*/
 outOfRangeLowMessage.style.textAlign = 'center';
 outOfRangeLowMessage.style.color = 'red';
 
 const outOfRangeHighMessage = createParagraphAndSetClassNameToMessage();
-/*
-const outOfRangeHighMessage = document.createElement('p');
-outOfRangeHighMessage.className = 'message';
-*/
 outOfRangeHighMessage.innerHTML = createOutOfRangeHighOrLowMessage('above 99');
-/*
-outOfRangeHighMessage.innerHTML = 'You guessed above 99. <br>This did not count as a turn. Please try again. <br>Only numbers between 1 and 99 are allowed guesses.';
-*/
 outOfRangeHighMessage.style.textAlign = 'center';
 outOfRangeHighMessage.style.color = 'red';
 const notANumberMessage = createParagraphAndSetClassNameToMessage();
-/*
-const notANumberMessage = document.createElement('p');
-notANumberMessage.className = 'message';
-*/
 notANumberMessage.innerHTML = `You tried submitting a guess that is not a number by <br>pressing the submit button without any value in the input field. <br>This is not a valid input. Please submit a number. ${mentionedAllowedGuesses()}`;
 notANumberMessage.style.textAlign = 'center';
 notANumberMessage.style.color = 'red';
